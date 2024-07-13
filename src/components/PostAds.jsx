@@ -88,7 +88,7 @@ export default function PostAds() {
             </div>
           </div>
           <div className="brandCondition">
-            <div className="brand">
+            <div className="brand" style={{ display: category === 'mobiles' ? 'flex' : 'none' }}>
               <h4>Brand*</h4>
               <select value={brand} onChange={(e) => setBrand(e.target.value)}>
                 <option value="">Select Brand</option>
