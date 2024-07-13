@@ -2,28 +2,28 @@
 export const products = [
 
     // Cars
-    { id: 'car-001', title: 'Toyota Corolla 2020', price: 3000000, location: 'punjab', time: '1 day ago', category: 'cars', isDeliverable: 'deliverable', condition: 'used' },
-    { id: 'car-002', title: 'Honda Civic 2019', price: 3500000, location: 'sindh', time: '2 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
-    { id: 'car-003', title: 'Suzuki Mehran 2018', price: 600000, location: 'islamabad', time: '3 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'used' },
-    { id: 'car-004', title: 'Hyundai Tucson 2021', price: 5000000, location: 'kpk', time: '4 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'new' },
-    { id: 'car-005', title: 'KIA Sportage 2022', price: 5500000, location: 'Balochistan', time: '5 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'new' },
-    { id: 'car-006', title: 'Toyota Prius 2017', price: 4000000, location: 'punjab', time: '6 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
-    { id: 'car-007', title: 'Honda City 2021', price: 3200000, location: 'punjab', time: '7 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'refurbished' },
-    { id: 'car-008', title: 'Suzuki Alto 2020', price: 1300000, location: 'punjab', time: '8 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
-    { id: 'car-009', title: 'Hyundai Elantra 2021', price: 4500000, location: 'punjab', time: '9 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'new' },
-    { id: 'car-010', title: 'KIA Picanto 2019', price: 1500000, location: 'punjab', time: '10 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'car-001', title: 'Toyota Corolla 2020', price: 3000000, location: 'punjab', time: '1 day ago', category: 'cars', isDeliverable: 'deliverable', condition: 'used' },
+    { key: 'car-002', title: 'Honda Civic 2019', price: 3500000, location: 'sindh', time: '2 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'car-003', title: 'Suzuki Mehran 2018', price: 600000, location: 'islamabad', time: '3 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'used' },
+    { key: 'car-004', title: 'Hyundai Tucson 2021', price: 5000000, location: 'kpk', time: '4 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'new' },
+    { key: 'car-005', title: 'KIA Sportage 2022', price: 5500000, location: 'Balochistan', time: '5 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'new' },
+    { key: 'car-006', title: 'Toyota Prius 2017', price: 4000000, location: 'punjab', time: '6 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'car-007', title: 'Honda City 2021', price: 3200000, location: 'punjab', time: '7 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'refurbished' },
+    { key: 'car-008', title: 'Suzuki Alto 2020', price: 1300000, location: 'punjab', time: '8 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'car-009', title: 'Hyundai Elantra 2021', price: 4500000, location: 'punjab', time: '9 days ago', category: 'cars', isDeliverable: 'deliverable', condition: 'new' },
+    { key: 'car-010', title: 'KIA Picanto 2019', price: 1500000, location: 'punjab', time: '10 days ago', category: 'cars', isDeliverable: 'notDeliverable', condition: 'used' },
 
 
     // Bikes
-    { id: 'bike-001', title: 'Super Power LEO 200CC Heavy Bike', price: 220000, location: 'punjab', time: '1 day ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
-    { id: 'bike-002', title: 'Honda CB 150', price: 320000, location: 'islamabad', time: '3 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'used' },
-    { id: 'bike-003', title: 'Yamaha 125Z-DX 2021', price: 230000, location: 'sindh', time: '2 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'new' },
-    { id: 'bike-004', title: 'Super Power LEO 200CC Heavy Bike', price: 250000, location: 'punjab', time: '5 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'used' },
-    { id: 'bike-005', title: 'Suzuki GS 150', price: 150000, location: 'punjab', time: '6 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
-    { id: 'bike-006', title: 'Honda CD 70', price: 75000, location: 'Balochistan', time: '8 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'used' },
-    { id: 'bike-007', title: 'Yamaha YBR 125', price: 180000, location: 'kpk', time: '9 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'refurbished' },
-    { id: 'bike-008', title: 'Kawasaki Ninja 400', price: 850000, location: 'punjab', time: '7 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'new' },
-    { id: 'bike-009', title: 'Honda CBR 250R', price: 550000, location: 'punjab', time: '12 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
+    { key: 'bike-001', title: 'Super Power LEO 200CC Heavy Bike', price: 220000, location: 'punjab', time: '1 day ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
+    { key: 'bike-002', title: 'Honda CB 150', price: 320000, location: 'islamabad', time: '3 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'bike-003', title: 'Yamaha 125Z-DX 2021', price: 230000, location: 'sindh', time: '2 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'new' },
+    { key: 'bike-004', title: 'Super Power LEO 200CC Heavy Bike', price: 250000, location: 'punjab', time: '5 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'bike-005', title: 'Suzuki GS 150', price: 150000, location: 'punjab', time: '6 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
+    { key: 'bike-006', title: 'Honda CD 70', price: 75000, location: 'Balochistan', time: '8 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'used' },
+    { key: 'bike-007', title: 'Yamaha YBR 125', price: 180000, location: 'kpk', time: '9 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'refurbished' },
+    { key: 'bike-008', title: 'Kawasaki Ninja 400', price: 850000, location: 'punjab', time: '7 days ago', category: 'bikes', isDeliverable: 'notDeliverable', condition: 'new' },
+    { key: 'bike-009', title: 'Honda CBR 250R', price: 550000, location: 'punjab', time: '12 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
     { key: 'bike-010', title: 'Suzuki Hayabusa', price: 1700000, location: 'punjab', time: '15 days ago', category: 'bikes', isDeliverable: 'deliverable', condition: 'used' },
 
     // Houses

@@ -7,7 +7,6 @@ import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 
 
 export default function PostAds() {
-  // const [updateproducts, setUpdateProducts]=useOutletContext()
   const [brand, setBarnd] = useState('')
   const [condition, setcondition] = useState('')
   const [title, setTitle] = useState('')
@@ -22,7 +21,7 @@ export default function PostAds() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newProduct = {
-      id: `product-${addProducts.length + 1}`, // Generate unique ID for each product
+      key: new Date().getTime(), 
       brand,
       condition,
       title,
@@ -33,11 +32,8 @@ export default function PostAds() {
       userMail,
       userNumber,
     };
-
-    // Add new product to the products array
     products.push(newProduct);
 
-    // Optional: Update state or clear form inputs
     setAddProducts([...addProducts, newProduct]);
     setBarnd('');
     setcondition('');
@@ -53,7 +49,6 @@ export default function PostAds() {
     localStorage.setItem('userProducts', JSON.stringify(products));
     history.push('/');
   };
-  console.log(addProducts);
   localStorage.setItem('userProducts', JSON.stringify(addProducts))
 
 

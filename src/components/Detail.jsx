@@ -15,13 +15,12 @@ export default function () {
     const query = useQuery();
     const productkey = query.get('key');
     const category = query.get('category');
-    console.log(productkey);
 
     let productData = JSON.parse(localStorage.getItem('products'))
     let detailData = productData.filter((data) => {
         return data.key == productkey
     })
-    console.log(detailData);
+    console.log('detail pages',detailData);
     const imageSrc = categoryImages[category];
 
     useEffect(() => {
