@@ -1,27 +1,26 @@
-import React, { useEffect, useState } from 'react'
-import '../styles/postAds.css'
-import logo from '../assets/logo.png'
-import { products } from './products';
-import { Link, useNavigate, useOutletContext } from 'react-router-dom';
-
-
+import React, { useState } from 'react';
+import '../styles/postAds.css';
+import logo from '../assets/logo.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function PostAds() {
-  const [brand, setBarnd] = useState('')
-  const [condition, setcondition] = useState('')
-  const [title, setTitle] = useState('')
-  const [productDesc, setProductDesc] = useState('')
-  const [location, setLocation] = useState('')
-  const [category, setCategory] = useState('')
-  const [price, setPrice] = useState([])
-  const [userMail, setuserMail] = useState('')
-  const [userNumber, setUserNumber] = useState()
-  const [addProducts, setAddProducts] = useState('')
+  const [brand, setBrand] = useState('');
+  const [condition, setCondition] = useState('');
+  const [title, setTitle] = useState('');
+  const [productDesc, setProductDesc] = useState('');
+  const [location, setLocation] = useState('');
+  const [category, setCategory] = useState('');
+  const [price, setPrice] = useState('');
+  const [userMail, setUserMail] = useState('');
+  const [userNumber, setUserNumber] = useState('');
+  const [addProducts, setAddProducts] = useState(
+    JSON.parse(localStorage.getItem('userProducts')) || []
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newProduct = {
-      key: new Date().getTime(), 
+      key: new Date().getTime(), // Use 'id' instead of 'key'
       brand,
       condition,
       title,
@@ -32,52 +31,43 @@ export default function PostAds() {
       userMail,
       userNumber,
     };
-    products.push(newProduct);
 
-    setAddProducts([...addProducts, newProduct]);
-    setBarnd('');
-    setcondition('');
+    const updatedProducts = [...addProducts, newProduct];
+    setAddProducts(updatedProducts);
+    localStorage.setItem('userProducts', JSON.stringify(updatedProducts));
+
+    setBrand('');
+    setCondition('');
     setTitle('');
     setProductDesc('');
     setLocation('');
     setCategory('');
     setPrice('');
-    setuserMail('');
+    setUserMail('');
     setUserNumber('');
-
-
-    localStorage.setItem('userProducts', JSON.stringify(products));
-    history.push('/');
   };
-  localStorage.setItem('userProducts', JSON.stringify(addProducts))
-
-
-
-
-  function handleBrandChange(e) {
-    setBarnd(e.target.value)
-  }
-  function conditionChange(e) {
-    setcondition(e.target.value)
-  }
 
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate(-1);
   };
+
   return (
     <div className='postAds'>
       <div className="navBar">
-        <i class="fa-solid fa-arrow-left" onClick={handleBack}></i>
-        <Link to='/'> <img src={logo} alt="" /></Link>
+        <i className="fa-solid fa-arrow-left" onClick={handleBack}></i>
+        <Link to='/'>
+          <img src={logo} alt="Logo" />
+        </Link>
       </div>
       <div className="postMain">
         <h1 style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>Post Your Ads</h1>
         <div className="adsDetail">
           <div className="adsCategory">
             <h4>Category</h4>
-            <select name="" id="" value={category} onChange={(e) => { setCategory(e.target.value) }}>
+            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+              <option value="">Select Category</option>
               <option value="mobiles">Mobiles</option>
               <option value="cars">Cars</option>
               <option value="bikes">Bikes</option>
@@ -88,37 +78,19 @@ export default function PostAds() {
               <option value="books">Books</option>
               <option value="furniture">Furniture</option>
             </select>
-            {/* <div className="categoryImg">
-              <img src={mobile} alt="" />
-              <div>
-                <h5>Mobiles</h5>
-                <p>Tablets</p>
-              </div>
-
-            </div> */}
-            {/* <h5>Change</h5> */}
           </div>
           <div className="uploadImg">
             <h4>Upload Images</h4>
             <div className="uploadBtns">
-              <i class="fa-solid fa-plus"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
-              <i class="fa-solid fa-camera"></i>
+              <i className="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-camera"></i>
+              {/* Add more icons as needed */}
             </div>
           </div>
           <div className="brandCondition">
             <div className="brand">
               <h4>Brand*</h4>
-              <select value={brand} onChange={handleBrandChange}>
+              <select value={brand} onChange={(e) => setBrand(e.target.value)}>
                 <option value="">Select Brand</option>
                 <option value="Apple">Apple</option>
                 <option value="Samsung">Samsung</option>
@@ -131,12 +103,10 @@ export default function PostAds() {
                 <option value="Tecno">Tecno</option>
                 <option value="Other">Other</option>
               </select>
-              {/* <p>Selected Brand: {selectedBrand}</p> */}
-
             </div>
             <div className="condition">
               <h4>Condition</h4>
-              <select value={condition} onChange={conditionChange} >
+              <select value={condition} onChange={(e) => setCondition(e.target.value)}>
                 <option value="">Select Condition</option>
                 <option value="used">Used</option>
                 <option value="new">New</option>
@@ -145,73 +115,69 @@ export default function PostAds() {
               </select>
             </div>
           </div>
-          <div className="descBox ">
+          <div className="descBox">
             <div className="descTitle inputFields">
               <h4>Add title</h4>
               <input
                 type="text"
                 value={title}
                 placeholder='Enter Title'
-                onChange={(e) => { setTitle(e.target.value) }}
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div className="descField">
               <h4>Description</h4>
               <textarea
                 value={productDesc}
-                onChange={(e) => { setProductDesc(e.target.value) }}
-                rows="10" cols="30"
+                onChange={(e) => setProductDesc(e.target.value)}
+                rows="10"
                 placeholder="Describe the item you're selling"
-
               ></textarea>
             </div>
             <div className="descLocation inputFields">
               <h4>Location</h4>
               <input
-                value={location}
-                onChange={(e) => { setLocation(e.target.value) }}
                 type="text"
+                value={location}
                 placeholder='Type Address & City'
+                onChange={(e) => setLocation(e.target.value)}
               />
             </div>
           </div>
-
         </div>
-
         <div className="descPrice inputFields">
           <h4>Price</h4>
           <input
-            value={price}
-            onChange={(e) => { setPrice(e.target.value) }}
             type="number"
+            value={price}
             placeholder='Enter Price'
+            onChange={(e) => setPrice(e.target.value)}
           />
         </div>
         <div className='userInfo'>
           <div className="userName inputFields">
             <h4>Email</h4>
             <input
-              onChange={(e) => { setuserMail(e.target.value) }}
-              value={userMail}
               type="email"
+              value={userMail}
               placeholder='Enter Email'
+              onChange={(e) => setUserMail(e.target.value)}
             />
           </div>
           <div className="phoneNum inputFields">
             <h4>Mobile Phone Number</h4>
             <input
-              value={userNumber}
-              onChange={(e) => { setUserNumber(e.target.value) }}
               type="number"
+              value={userNumber}
               placeholder='Enter Phone Number'
+              onChange={(e) => setUserNumber(e.target.value)}
             />
           </div>
           <div className="postBtn">
-            <button onClick={handleSubmit}> Post Now </button>
+            <button onClick={handleSubmit}>Post Now</button>
           </div>
         </div>
-
       </div>
     </div>
-  )
+  );
 }

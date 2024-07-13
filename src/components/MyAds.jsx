@@ -3,7 +3,7 @@ import CategoryCard from './CategoryCard';
 
 export default function MyAds() {
   const myProduct = JSON.parse(localStorage.getItem('userProducts'));
-
+// console.log(myProduct);
   return (
     <div style={{padding:'20px'}}>
       <h2>My Ads</h2>
