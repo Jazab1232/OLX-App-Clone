@@ -1,0 +1,74 @@
+.profileOptions{
+    width: 288px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 130px;
+    right: 100px;
+    z-index: 20;
+    background-color: white;
+}
+.profile{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 16px;
+    gap: 20px;
+    align-items: center;
+    
+}
+.profileImg{
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+.profileImg img{
+    width: 60px;
+}
+.btnProfile {
+    width: 240px;
+    height: 45px;
+    border: 2px solid #041024;
+    color: #041024;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0  16px;
+    text-decoration: none;
+    padding: 10px 10px;
+   
+}
+.btnProfile:hover{
+    background-color: #041024;
+    color: white;
+}
+.otherOption{
+    border-top:1px solid rgb(88, 88, 88) ;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0 0 0;
+}
+.otherOption p{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+}
+.otherOption p:hover{
+    color: #176161;
+    text-decoration: underline;
+}
+.otherOption p i{
+    text-align: center;
+    width: 25px;
+    font-size: 23px;
+}
+
+    

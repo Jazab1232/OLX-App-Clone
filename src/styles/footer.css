@@ -1,0 +1,37 @@
+.footer {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    height: 190px;
+    background-color: #EAEEEF;
+    padding: 20px 20px 40px;
+    border-top: 1px solid  #547478;
+    /* position: fixed;
+    bottom: 0px; */
+}
+
+.footer div {
+    width: 20%;
+}
+.footer p{
+    font-size: 12px;
+    color: #547478;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.footer h4 {
+    color: #002F34;
+    font-size: 14px;
+}
+.socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #547478;
+    border: 1px solid #547478;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    padding: 5px 5px 5px 7px;
+    margin-inline: 5px;
+}

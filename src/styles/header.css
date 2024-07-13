@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    background-color: #fff;
+    padding: 0 0 10px 0;
+    z-index: 10;
+    height: 140px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 36px 10px;
+    height: 55px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding: 0 20px 0 0;
+}
+
+.logo img {
+    width: 55px;
+}
+
+.cars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 20px 0 0;
+}
+
+.cars i {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+    align-self: center;
+}
+
+.property {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.property i {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+    align-self: center;
+}
+
+.nav span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0px 36px 6px;
+}
+
+
+#location {
+    width: 300px;
+    height: 48px;
+    border-radius: 5px;
+    padding-inline: 15px;
+    font-size: 16px;
+}
+
+.searchBox {
+    width: 750px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.searchBox input {
+    height: 45px;
+    width: 560px;
+    padding: 0 0 0 20px;
+    border: none;
+    outline: none;
+
+
+}
+
+.searchBox button {
+    min-width: 50px;
+    height: 48px;
+    color: white;
+    border: none;
+    background-color: #04111c;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 16px;
+}
+
+.profileIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: #04111c; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.profileIcon img {
+    width: 50px;
+}
+
+.fa-bell {
+    font-size: 25px;
+}
+
+.fa-comment {
+    font-size: 25px;
+
+}
+
+.profileIcon i {
+    color: white;
+    font-size: 25px;
+    margin: 10px 0 0 10px;
+
+}
+
+.sellButton {
+    border-top: 5px solid aquamarine;
+    border-right: 5px solid blue;
+    border-left: 5px solid orange;
+    border-bottom: 5px solid green;
+    border-radius: 40px;
+    width: 104px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.sellButton p {
+    font-weight: 600;
+    color: black;
+}
+
+.navIcons {
+    margin: 0 0 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.isLogin {
+    text-decoration: none;
+    color: black;
+    /* border-bottom: 2px solid black; */
+}
+
+
+@media (max-width:1000px) {
+    .navIcons i {
+        display: none;
+    }
+
+    .navIcons {
+        margin: 0 0 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width:992px) {
+    #location {
+        width: 200px;
+        height: 48px;
+        border-radius: 5px;
+        padding-inline: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:762px) {
+    .navIcons {
+        margin: 0 0 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0px 36px 6px;
+    }
+    
+}

@@ -1,0 +1,107 @@
+.userProfile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #122F34;
+    padding: 40px 0;
+}
+
+.profileBox {
+    width: 80%;
+    border: 1px solid #122F34;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+h3 {
+    color: #122F34;
+    padding: 0 0 20px 0;
+}
+
+.userImg {
+    border-top: 1px solid #122F34;
+    height: 170px;
+    padding: 20px 0;
+}
+
+.userImg img {
+    width: 100px;
+}
+
+.userImg button {
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    background-color: #122F34;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.profileInfo {
+    border-top: 1px solid #122F34;
+    padding: 20px 0;
+
+}
+
+.profileInfo input {
+    width: 450px;
+    height: 48px;
+    outline: none;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #122f34da;
+    border-radius: 5px;
+    outline: none;
+}
+
+.profileInfo select {
+    width: 450px;
+    height: 48px;
+    outline: none;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.profileInfo textarea {
+    width: 450px;
+    height: 200px;
+    resize: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.profileContact {
+    border-top: 1px solid black;
+    padding: 20px 0;
+}
+
+.profileContact input {
+    display: block;
+    width: 450px;
+    height: 48px;
+    outline: none;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #122f34da;
+    border-radius: 5px;
+    outline: none;
+
+
+}
+.saveBtn{
+    border-top: 1px solid black;
+    padding: 20px 0 0 0;
+}
+.saveBtn button {
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    background-color: #122F34;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+}

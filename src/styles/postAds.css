@@ -1,0 +1,206 @@
+.navBar {
+    height: 70px;
+    background-color: #F7F8F8;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navBar img {
+    width: 50px;
+}
+
+.navBar i {
+    font-size: 25px;
+}
+
+.postMain {
+    min-height: 100vh;
+    padding: 10px 30px;
+}
+
+.adsDetail {
+    width: 85%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.adsCategory {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 100px;
+    padding: 10px 30px;
+    border-bottom: 1px solid #6e6e6e;
+}
+
+.adsDetail h4 {
+    width: 30%;
+}
+
+.adsCategory h5 {
+    color: blue;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+}
+
+.categoryImg {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.categoryImg img {
+    width: 60px;
+}
+
+.categoryImg h5 {
+    font-size: 14px;
+    color: black;
+}
+
+.categoryImg p {
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.uploadImg {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px 40px;
+    height: fit-content;
+
+
+}
+
+.uploadBtns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 200px;
+}
+
+.uploadBtns i {
+    width: 70px;
+    height: 60px;
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px
+}
+
+.adsCategory select {
+    width: 70%;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.brand {
+    display: flex;
+    margin: 10px 0;
+}
+
+.condition {
+    display: flex;
+    margin: 11px 0;
+}
+
+.brandCondition {
+    padding: 10px 30px;
+    border-top: 1px solid #6e6e6e;
+}
+
+.brandCondition h4 {
+    width: 30%;
+}
+
+.brandCondition select {
+    width: 70%;
+    height: 40px;
+    padding: 0 10px;
+
+}
+
+.descBox {
+    border-top: 1px solid #6e6e6e;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.inputFields {
+    display: flex;
+    padding: 10px 30px;
+}
+
+.inputFields input {
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+}
+
+.descField {
+    display: flex;
+    padding: 10px 30px;
+}
+
+.descField textarea {
+    width: 70%;
+    height: 200px;
+    resize: none;
+    padding: 20px 15px;
+    font-size: 16px
+}
+
+.descPrice {
+
+    margin: 20px 0 0 0;
+    padding: 20px 30px;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.descPrice h4 {
+    width: 30%;
+}
+
+.userInfo {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+.userInfo h4 {
+    width: 30%;
+}
+
+.postBtn {
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 15px 30px 0 0;
+    margin: 20px 0 0 0;
+}
+
+.postBtn button {
+    height: 48px;
+    padding: 10px 20px;
+    background-color: #003035;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
