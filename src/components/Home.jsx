@@ -18,13 +18,18 @@ export default function Home() {
     const [disOption, setDisOption, logedIn, setLogedin,
         cardData, setCardData, inputVal, setInputVal] = useOutletContext()
 
-
-    localStorage.setItem('products', JSON.stringify(products))
-    let fetchProducts = JSON.parse(localStorage.getItem('products'))
-    let filterProducts = products.filter((data) => {
-        return data.category.includes(inputVal) 
-    })
-    // console.log(fetchProducts);
+        let userAdsData = JSON.parse(localStorage.getItem('userProducts')) || []
+        let fetchProducts = JSON.parse(localStorage.getItem('products')) ||[]
+        let combinedData = [...products, ...userAdsData]
+        localStorage.setItem('products', JSON.stringify(combinedData))
+        let filterProducts = combinedData.filter((data) => {
+            return data.category.includes(inputVal)
+        })
+    // localStorage.setItem('products', JSON.stringify(products))
+    // let fetchProducts = JSON.parse(localStorage.getItem('products'))
+    // let filterProducts = products.filter((data) => {
+    //     return data.category.includes(inputVal) 
+    // })
 
 
 

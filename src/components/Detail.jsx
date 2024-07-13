@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/detail.css'
 // import mainImg from '../assets/carIMG.jpeg'
+import ProfileOption from './ProfileOption';
 import profile from '../assets/profileIMG.png'
 import CategoryNav from './CategoryNav';
 import { categoryImages } from './imgMapping';
@@ -114,6 +115,7 @@ let combinedData=[...productData,...userAdsData]
                     </div>
                 </div>
             </div>
+            <ProfileOption />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/mobilePhone.css'
 import CategoryNav from './CategoryNav'
 import CategoryCard from './CategoryCard'
+import ProfileOption from './ProfileOption';
 import FilterTab from './FilterTab';
 import { useLocation } from 'react-router-dom';
 
@@ -83,6 +84,7 @@ export default function ProductSection() {
 
                 </div>
             </div>
+            <ProfileOption />
         </div>
     )
 }
