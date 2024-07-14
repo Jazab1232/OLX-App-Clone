@@ -15,11 +15,11 @@ export default function UserProfile() {
   useEffect(() => {
     const storedProfile = JSON.parse(localStorage.getItem('userProfile'));
     if (storedProfile) {
-      setName(storedProfile.name || '');
-      setGender(storedProfile.gender || '');
-      setAbout(storedProfile.about || '');
-      setPhoneNumber(storedProfile.phoneNumber || '');
-      setEmail(storedProfile.email || '');
+      setName(storedProfile.name );
+      setGender(storedProfile.gender );
+      setAbout(storedProfile.about );
+      setPhoneNumber(storedProfile.phoneNumber );
+      setEmail(storedProfile.email );
     }
   }, []);
 
@@ -33,8 +33,7 @@ export default function UserProfile() {
     };
     localStorage.setItem('userProfile', JSON.stringify(userProfile));
     alert('Profile Updated successfully!');
-    let profileData = JSON.parse(localStorage.getItem('userProfile'));
-    console.log('profile data', profileData);
+
   };
 
   return (
