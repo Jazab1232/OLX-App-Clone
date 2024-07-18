@@ -1,8 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import Detail from './components/Detail.jsx';
 import PostAds from './components/PostAds.jsx';
@@ -14,60 +14,47 @@ import MyAds from './components/MyAds.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "",
+        index: true,
         element: <Home />
       },
       {
-        path: "detail",
+        path: 'detail',
         element: <Detail />
       },
       {
-        path: "product-section",
+        path: 'product-section',
         element: <ProductSection />
       },
       {
-        path: "user-profile",
+        path: 'user-profile',
         element: <UserProfile />
       },
       {
-        path: "my-ads",
+        path: 'my-ads',
         element: <MyAds />
       },
       {
-        path: "login",
+        path: 'login',
         element: <Login />
       },
       {
-        path: "login-info",
+        path: 'login-info',
         element: <AddLoginInfo />
       },
+      {
+        path: 'post-ads',
+        element: <PostAds />
+      }
     ]
-
-  },
-  {
-    path: "post-ads",
-    element: <PostAds />
-  },
-
-
-
+  }
 ]);
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<App />}>
-//       <Route index element={<Home />} />
-//       <Route path="detail" element={<Detail />} />
-//       <Route path="phones" element={<MobilePhones />} />
-//       <Route path="post-ads" element={<PostAds />} />
-//     </Route>
-//   )
-// );
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
-)
+);

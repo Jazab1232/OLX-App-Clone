@@ -1,12 +1,13 @@
-import React from 'react'
-import '../styles/profileOption.css'
-import profile from '../assets/profileIMG.png'
-import { Link, useOutletContext } from 'react-router-dom'
+import React from 'react';
+import '../styles/profileOption.css';
+import profile from '../assets/profileIMG.png';
+import { Link, useOutletContext } from 'react-router-dom';
 
 export default function ProfileOption() {
     const [disOption, setDisOption, logedIn, setLogedin] = useOutletContext();
+
     function handleLogOut() {
-        setLogedin(false)
+        setLogedin(false);
         localStorage.setItem('logedIn', 'false');
         setDisOption(false);
     }
@@ -22,23 +23,25 @@ export default function ProfileOption() {
                     <h3>Jazab Shoukat</h3>
                 </div>
             </div>
-            <Link to={logedIn ? `user-profile` : `login`} onClick={() => { setDisOption(false) }} className='btnProfile'>View and edit your profile</Link>
+            <Link to={logedIn ? `/user-profile` : `/login`} onClick={() => { setDisOption(false); }} className='btnProfile'>
+                View and edit your profile
+            </Link>
             <div className="otherOption">
-                <Link to={logedIn ? `my-ads` : `login`} onClick={() => { setDisOption(false) }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
+                <Link to={logedIn ? `/my-ads` : `/login`} onClick={() => { setDisOption(false); }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
                     <i className="fa-regular fa-file"></i>My ads
                 </Link>
-                <Link to={logedIn ? `post-ads` : `login`} onClick={() => { setDisOption(false) }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
+                <Link to={logedIn ? `/post-ads` : `/login`} onClick={() => { setDisOption(false); }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
                     <i className="fa-solid fa-camera"></i>Start Selling
                 </Link>
                 <p><i className="fa-regular fa-heart"></i>Favourite & Saved</p>
                 <p><i className="fa-regular fa-eye"></i>Public profile</p>
                 {logedIn ?
                     <p onClick={handleLogOut}><i className="fa-solid fa-arrow-right-from-bracket"></i>Log Out</p>
-                    : <Link to={`login`} onClick={handleLogOut} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
+                    : <Link to={`/login`} onClick={() => { setDisOption(false); }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
                         <i className="fa-solid fa-arrow-right-from-bracket"></i>Log In
                     </Link>
                 }
             </div>
         </div>
-    )
+    );
 }

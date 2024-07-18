@@ -2,10 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/profile.css';
 import profile from '../assets/profileIMG.png';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import CategoryNav from './CategoryNav';
+import ProfileOption from './ProfileOption';
 
 export default function UserProfile() {
+
+  const [logedIn, setLogedinl] = useOutletContext()
   const [name, setName] = useState('');
   const [gender, setGender] = useState('');
   const [about, setAbout] = useState('');
@@ -15,11 +18,11 @@ export default function UserProfile() {
   useEffect(() => {
     const storedProfile = JSON.parse(localStorage.getItem('userProfile'));
     if (storedProfile) {
-      setName(storedProfile.name );
-      setGender(storedProfile.gender );
-      setAbout(storedProfile.about );
-      setPhoneNumber(storedProfile.phoneNumber );
-      setEmail(storedProfile.email );
+      setName(storedProfile.name);
+      setGender(storedProfile.gender);
+      setAbout(storedProfile.about);
+      setPhoneNumber(storedProfile.phoneNumber);
+      setEmail(storedProfile.email);
     }
   }, []);
 
@@ -95,6 +98,8 @@ export default function UserProfile() {
           </div>
         </div>
       </div>
+
+      <ProfileOption />
     </div>
   );
 }

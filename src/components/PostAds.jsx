@@ -55,12 +55,12 @@ export default function PostAds() {
 
   return (
     <div className='postAds'>
-      <div className="navBar">
+      {/* <div className="navBar">
         <i className="fa-solid fa-arrow-left" onClick={handleBack}></i>
         <Link to='/'>
           <img src={logo} alt="Logo" />
         </Link>
-      </div>
+      </div> */}
       <div className="postMain">
         <h1 style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>Post Your Ads</h1>
         <div className="adsDetail">
