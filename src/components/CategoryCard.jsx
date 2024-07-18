@@ -1,12 +1,14 @@
 import React from 'react'
 import '../styles/categoryCard.css'
 import { categoryImages } from './imgMapping';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 export default function CategoryCard({ price, title, location, time, category, index }) {
+    const [showFilter, setShowFilter] = useOutletContext()
     const imageSrc = categoryImages[category];
+
     return (
-        <Link to={`/detail?key=${index}&category=${category}`} className='categoryCard'>
+        <Link to={`/detail?key=${index}&category=${category}`} className='categoryCard' >
             <div className="imgCard">
                 <img src={imageSrc} alt="" />
             </div>
@@ -20,7 +22,7 @@ export default function CategoryCard({ price, title, location, time, category, i
                 <p className='time'>{time}</p>
                 <div className="btnBox">
                     <button >call</button>
-                    <button style={{ color: 'white', backgroundColor: "#04111c", marginInline: '20px' }}>chat</button>
+                    <button style={{ color: 'white', backgroundColor: "#04111c" }}>chat</button>
                 </div>
             </div>
         </Link>

@@ -47,11 +47,15 @@
 .cardTitle {
     height: 50px;
 }
+.btnBox{
+    display: flex;
+    gap: 20px;
+}
 
 .btnBox button {
     width: 100px;
     height: 40px;
-    margin: 15px  0;
+    margin: 15px 0;
     border-radius: 5px;
     border: 3px solid #04111c;
     color: #04111c;
@@ -60,14 +64,164 @@
     background-color: #fff;
 
 }
-/* #btnDark{
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    border: 3px solid #04111c;
-    background-color: #04111c;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    
-} */
+
+@media (max-width:892px) {
+    .categoryCard {
+        height: 220px;
+
+    }
+
+    .imgCard {
+        width: 180px;
+        min-width: 180px;
+
+    }
+
+    .cardText {
+
+        padding: 10px 10px 10px;
+        width: 100%;
+    }
+
+    .cardTitle {
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .priceBox h2 {
+        font-size: 20px;
+    }
+
+    .location {
+        font-size: 14px;
+        opacity: .9;
+    }
+
+    .time {
+        font-size: 14px;
+        opacity: .9;
+    }
+
+    .btnBox button {
+        width: 80px;
+        height: 38px;
+        margin: 15px 0;
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+}
+@media (max-width:600px) {
+    .categoryCard {
+        height: 220px;
+
+    }
+
+    .imgCard {
+        width: 180px;
+        min-width: 180px;
+
+    }
+
+    .cardText {
+
+        padding: 10px 10px 10px;
+        width: 100%;
+    }
+
+    .cardTitle {
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .priceBox h2 {
+        font-size: 20px;
+    }
+
+    .location {
+        font-size: 14px;
+        opacity: .9;
+    }
+
+    .time {
+        font-size: 14px;
+        opacity: .9;
+    }
+
+    .btnBox button {
+        width: 80px;
+        height: 38px;
+        margin: 15px 0;
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+}
+
+@media (max-width:448px) {
+    .categoryCard {
+        height: 170px;
+        width: 100%;
+
+    }
+
+    .btnBox button {
+        margin: 10px 0;
+
+    }
+
+    .imgCard {
+        width: 130px;
+        max-width: 130px;
+
+    }
+
+    /* .imgCard img {
+        width: 130px;
+
+    } */
+    .cardText {
+
+        padding: 10px 10px 10px;
+        width: 100%;
+    }
+
+    .cardText {
+
+        padding: 10px 10px 10px;
+        width: 100%;
+    }
+
+    .cardTitle {
+        height: 50px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .priceBox h2 {
+        font-size: 18px;
+    }
+
+    .location {
+        font-size: 12px;
+        opacity: .9;
+    }
+
+    .time {
+        font-size: 12px;
+        opacity: .9;
+    }
+.btnBox{
+    gap: 8px;
+}
+    .btnBox button {
+        width: 70px;
+        height: 38px;
+        margin: 15px 0;
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+}

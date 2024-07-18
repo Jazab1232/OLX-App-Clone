@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/mobilePhone.css'
+import '../styles/productSection.css'
 import CategoryNav from './CategoryNav'
 import CategoryCard from './CategoryCard'
 import ProfileOption from './ProfileOption';
 import FilterTab from './FilterTab';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useOutletContext } from 'react-router-dom';
 
 export default function ProductSection() {
+
+    const [showFilter, setShowFilter] = useState(false)
     const [accessories, setAccessories] = useState(false)
     const [minPrice, setMinPrice] = useState([])
     const [maxPrice, setMaxPrice] = useState([])
     const [condition, setCondition] = useState([])
     const [location, setLocation] = useState([])
     const [isDeliverable, setIsDeliverable] = useState([])
+    console.log(showFilter);
 
     function useQuery() {
         return new URLSearchParams(useLocation().search);
@@ -48,13 +51,19 @@ export default function ProductSection() {
             return (data.price >= minPrice) && (data.price <= maxPrice)
         }
     })
+    function showFilterTab() {
+        setShowFilter(!showFilter)
+    }
 
 
     return (
         <div>
             <CategoryNav />
             <p style={{ opacity: '.8', paddingInline: '36px', marginBottom: '20px', marginTop: '40px', textTransform: 'capitalize' }}>Home / {category}</p>
-            <h2 className='title' >{category} in Pakistan <span>{100}+ ads</span></h2>
+            <div className="sectionTitle" style={{ display: 'flex', gap: '20px' }}>
+                <h2 className='title' >{category} in Pakistan <span>{100}+ ads</span></h2>
+                <button onClick={showFilterTab}><i class="fa-solid fa-sliders"></i>Filter</button>
+            </div>
             <div className="mainPhone">
                 <div className="filterBox">
                     <FilterTab
@@ -72,6 +81,7 @@ export default function ProductSection() {
                 <div className="cardList">
                     {filterData2.map((data) => (
                         <CategoryCard
+
                             category={category}
                             index={data.key}
                             price={data.price}
@@ -83,6 +93,22 @@ export default function ProductSection() {
 
 
                 </div>
+            </div>
+            <div className="filterBox2" style={{ display: showFilter ? 'flex' : 'none' }}>
+
+                <FilterTab
+                    setShowFilter={setShowFilter}
+                    showFilter={showFilter}
+                    condition={condition}
+                    location={location}
+                    isDeliverable={isDeliverable}
+                    setAccessories={setAccessories}
+                    setCondition={setCondition}
+                    setIsDeliverable={setIsDeliverable}
+                    setLocation={setLocation}
+                    setMaxPrice={setMaxPrice}
+                    setMinPrice={setMinPrice}
+                />
             </div>
             <ProfileOption />
         </div>

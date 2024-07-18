@@ -1,0 +1,134 @@
+.title {
+    padding: 0 0 0 36px;
+    margin: 30px 0 20px 0;
+    text-transform: capitalize;
+}
+
+.title span {
+    background-color: aquamarine;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+
+}
+
+.mainPhone {
+    display: flex;
+    margin: 30px 0;
+    padding: 0 36px 0;
+    /* width: 100%; */
+}
+
+.filterBox {
+    width: 30%;
+    border-top: 1px solid #a7a7a7;
+}
+
+.cardList {
+    width: 65%;
+    margin-left: 20px;
+    border-top: 1px solid #a7a7a7;
+}
+
+.sectionTitle {
+    align-items: center;
+}
+
+.sectionTitle button {
+    display: none;
+    background-color: #00111C;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sectionTitle button i {
+    font-size: 14px;
+}
+.filterBox2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); 
+    overflow-y: auto;
+    z-index: 100;
+}
+@media (max-width:892px) {
+    .filterBox {
+        width: 180px;
+        border-top: 1px solid #a7a7a7;
+    }
+
+    .cardList {
+        width: 75%;
+        margin-left: 10px;
+        border-top: 1px solid #a7a7a7;
+    }
+
+    .mainPhone {
+        display: flex;
+        margin: 30px 0;
+        padding: 0 10px 0;
+        /* width: 100%; */
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+    .mainPhone {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .filterBox {
+        display: none;
+    }
+
+    .cardList {
+        width: 100%;
+        margin-left: 20px;
+        border-top: 1px solid #a7a7a7;
+    }
+
+    .title {
+        font-size: 18px;
+        padding: 0 0 0 10px;
+    }
+
+    .sectionTitle button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width:448px) {
+    .mainPhone {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .filterBox {
+        display: none;
+    }
+
+    .cardList {
+        width: 100%;
+        margin-left: 10px;
+        border-top: 1px solid #a7a7a7;
+    }
+    .title span{
+        font-size: 10px;
+    }
+}

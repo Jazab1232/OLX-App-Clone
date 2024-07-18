@@ -91,10 +91,12 @@ h3 {
 
 
 }
-.saveBtn{
+
+.saveBtn {
     border-top: 1px solid black;
     padding: 20px 0 0 0;
 }
+
 .saveBtn button {
     border: none;
     border-radius: 5px;
@@ -104,4 +106,29 @@ h3 {
     font-size: 16px;
     font-weight: 600;
     padding: 0 10px;
+}
+
+@media (max-width:762px) {
+    .profileBox {
+        width: 95%;
+        padding: 20px 10px;
+    }
+}
+@media (max-width:600px) {
+    .profileBox {
+        width: 95%;
+        padding: 20px 10px;
+    }
+    .profileInfo input{
+        width: 100%;
+    }
+    .profileInfo select{
+        width: 100%;
+    }
+    .profileInfo textarea{
+        width: 100%;
+    }
+    .profileContact input{
+        width: 100%;
+    }
 }

@@ -46,3 +46,13 @@ border-bottom:1px solid #b3b3b3 ;
     margin: 15px;
     cursor: pointer;
 }
+
+
+@media (max-width:600px) {
+    .filterTab{
+       width: 100%;
+    }
+    .priceinput{
+        margin-inline:30px ;
+    }
+}

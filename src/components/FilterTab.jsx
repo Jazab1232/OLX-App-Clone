@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import '../styles/filterTab.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useOutletContext } from 'react-router-dom';
 
 export default function FilterTab({ price, condition, location, isDeliverable, setAccessories,
-    setPrice, setCondition, setLocation, setIsDeliverable, setMaxPrice, setMinPrice }) {
+    setPrice, setCondition, setLocation, setIsDeliverable, setMaxPrice, setMinPrice, showFilter, setShowFilter }) {
 
 
     const handleCondition = (event) => {
@@ -51,7 +51,8 @@ export default function FilterTab({ price, condition, location, isDeliverable, s
     const category = query.get('category');
 
     return (
-        <div className='filterTab'>
+        <div className='filterTab' >
+            <i class="fa-solid fa-xmark" onClick={()=>{setShowFilter(!showFilter)}} style={{ display: showFilter ? 'block' : 'none', margin: '20px' ,cursor:'pointer'}}></i>
             <h3>Filters</h3>
             <div className="categoriesTab">
                 <h2>Categories</h2>

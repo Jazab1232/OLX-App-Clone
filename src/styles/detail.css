@@ -5,7 +5,7 @@
 }
 
 .contactBox {
-    width: 380px;
+    width: 100%;
     height: fit-content;
     border: 1px solid #003035;
     border-radius: 5px;
@@ -163,4 +163,74 @@
 .detailsList h5 {
     margin: 22px 0;
     font-size: 14px;
+}
+
+
+
+
+@media (max-width:892px) {
+    .imgContainer{
+        width: 950px;
+    }
+    .imgContainer img{
+        width: 100%;
+        height: auto;
+    }
+    .contactBox{
+        width: 280px;
+    }
+    .locationBox{
+        width: 280px;
+    }
+    .priceDiv{
+        width: 85%;
+    }
+    .detailsBox{
+        width: 85%;
+    }
+}
+@media (max-width:600px) {
+    .topBox{
+        width: 100%;
+        display: block;
+    }
+    .imgContainer{
+        width: 100%;
+        height: 400px;
+    }
+    .topDetails{
+        width: 100%;
+    }
+    .contactBox{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .imgContainer img{
+        width: 100%;
+        height: auto;
+    }
+   
+    .locationBox{
+        width: 100%;
+    }
+    .priceDiv{
+        width: 100%;
+    }
+    .detailsBox{
+        width: 100%;
+    }
+}
+
+@media (max-width:448px) {
+    .topBox {
+        padding: 10px;
+    }
+    .priceDiv{
+        height: 200px;
+    }
+    .bottomBox{
+       
+        margin:0 10px;
+
+    }
 }

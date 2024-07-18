@@ -6,12 +6,12 @@ export default function MyAds() {
   const myProduct = JSON.parse(localStorage.getItem('userProducts'));
   // console.log(myProduct);
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '10px' }}>
       <h2>My Ads</h2>
       <div>
         {myProduct ? (
           myProduct.map((data) => (
-            <div style={{ width: '70%', margin: '10px' }}>
+            <div style={{ width: '100%' }}>
               <CategoryCard
                 index={data.key}
                 category={data.category}

@@ -20,7 +20,8 @@ export default function Header({ disOption, setDisOption, setInputVal }) {
     return (
         <div className='header'>
             <div className="nav">
-                <Link to='/' className="logo">
+                <i class="fa-solid fa-bars" onClick={() => setDisOption(!disOption)} ></i>
+                <Link to='/' className="logo1">
                     <img src={logo} alt="" />
                 </Link>
                 <div className="cars">

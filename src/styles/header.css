@@ -13,7 +13,11 @@
     z-index: 10;
     height: 140px;
 }
-
+.fa-bars{
+    display: none;
+    font-size: 24px;
+    margin-right: 10px;
+}
 .nav {
     display: flex;
     align-items: center;
@@ -22,14 +26,14 @@
     height: 55px;
 }
 
-.logo {
+.logo1 {
     display: flex;
     align-items: center;
     padding: 0;
     padding: 0 20px 0 0;
 }
 
-.logo img {
+.logo1 img {
     width: 55px;
 }
 
@@ -191,7 +195,7 @@ button i {
 }
 
 
-@media (max-width:1000px) {
+@media (max-width:1025px) {
     .navIcons i {
         display: none;
     }
@@ -206,7 +210,7 @@ button i {
 
 @media (max-width:992px) {
     #location {
-        width: 200px;
+        width: 150px;
         height: 48px;
         border-radius: 5px;
         padding-inline: 15px;
@@ -214,18 +218,100 @@ button i {
     }
 }
 
-@media (max-width:762px) {
+@media (max-width:768px) {
     .navIcons {
         margin: 0 0 0 10px;
         display: flex;
         align-items: center;
         gap: 10px;
     }
+    .nav{
+        margin: 16px 10px 10px;
+    }
     .nav2 {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin: 0px 36px 6px;
+        margin: 0px 10px 6px;
     }
     
+}
+
+@media (max-width:600px) {
+
+    #location{
+        display: none;
+    }
+    .navIcons{
+        display: none;
+    }
+    .sellButton{
+        display: none;
+    }
+    .searchBox{
+        width: 100%;
+    }
+    .searchBox input{
+        width: 90%;
+    }
+    .searchBox button{
+        width: 11%;
+    }
+    .fa-bars{
+        display: inline;
+    }
+    
+}
+@media (max-width:448px) {
+    .header{
+        padding: 0;
+        height: 120px;
+    }
+    .logo1 {
+        
+        padding: 0 15px 0 0;
+    }
+    
+    .logo1 img {
+        width: 45px;
+    }
+    .fa-bars{
+        margin-right: 10px;
+    }
+    .cars {
+        gap: 5px;
+        margin: 0 10px 0 0;
+    }
+    
+    .cars i {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .property {
+        gap: 5px;
+        margin: 0 10px 0 0;
+    }
+    
+    .property i {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .nav span{
+        font-size: 14px;
+    }
+    .searchBox{
+        height: 30px;
+    }
+    .searchBox input{
+        height: 30px;
+    }
+    .searchBox i{
+        font-size: 12px;
+    }
+    .searchBox button{
+        width: 9%;
+        height: 30px;
+    }
 }

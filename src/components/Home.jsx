@@ -18,13 +18,13 @@ export default function Home() {
     const [disOption, setDisOption, logedIn, setLogedin,
         cardData, setCardData, inputVal, setInputVal] = useOutletContext()
 
-        let userAdsData = JSON.parse(localStorage.getItem('userProducts')) || []
-        let fetchProducts = JSON.parse(localStorage.getItem('products')) ||[]
-        let combinedData = [...products, ...userAdsData]
-        localStorage.setItem('products', JSON.stringify(combinedData))
-        let filterProducts = combinedData.filter((data) => {
-            return data.category.includes(inputVal)
-        })
+    let userAdsData = JSON.parse(localStorage.getItem('userProducts')) || []
+    let fetchProducts = JSON.parse(localStorage.getItem('products')) || []
+    let combinedData = [...products, ...userAdsData]
+    localStorage.setItem('products', JSON.stringify(combinedData))
+    let filterProducts = combinedData.filter((data) => {
+        return data.category.includes(inputVal)
+    })
     // localStorage.setItem('products', JSON.stringify(products))
     // let fetchProducts = JSON.parse(localStorage.getItem('products'))
     // let filterProducts = products.filter((data) => {
@@ -36,63 +36,66 @@ export default function Home() {
     return (
         <div className='home'>
             <CategoryNav />
-            <h2 style={{ marginInline: '36px', marginTop: '20px' }}>All categories</h2>
-            <div className="homeLinks">
-                <div className="link">
-                    <Link to={`/product-section?category=mobiles`} className="img">
-                        <img src={mobile} alt="" />
-                    </Link>
-                    <p>Mobiles</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=cars`} className="img">
-                        <img src={vehicles} alt="" />
-                    </Link>
-                    <p>Vehicles</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=dresses`} className="img">
-                        <img src={fashion} alt="" />
-                    </Link>
-                    <p>Fashion & Beauty</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=houses`} className="img">
-                        <img src={key} alt="" />
-                    </Link>
-                    <p>Property For Sale</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=electronics`} className="img">
-                        <img src={electronics} alt="" />
-                    </Link>
-                    <p>Electronics</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=books`} className="img">
-                        <img src={books} alt="" />
-                    </Link>
-                    <p>Books</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=kids`} className="img">
-                        <img src={kids} alt="" />
-                    </Link>
-                    <p>Kids</p>
-                </div>
-                <div className="link">
-                    <Link to={`/product-section?category=furniture`} className="img">
-                        <img src={furniture} alt="" />
-                    </Link>
-                    <p>Furniture & Home decor</p>
+            <h2 style={{ marginTop: '20px' }}>All categories</h2>
+            <div className="homeLinksContainer">
+                <div className="homeLinks">
+                    <div className="link">
+                        <Link to={`/product-section?category=mobiles`} className="img">
+                            <img src={mobile} alt="" />
+                        </Link>
+                        <p>Mobiles</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=cars`} className="img">
+                            <img src={vehicles} alt="" />
+                        </Link>
+                        <p>Vehicles</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=dresses`} className="img">
+                            <img src={fashion} alt="" />
+                        </Link>
+                        <p>Fashion & Beauty</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=houses`} className="img">
+                            <img src={key} alt="" />
+                        </Link>
+                        <p>Property For Sale</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=electronics`} className="img">
+                            <img src={electronics} alt="" />
+                        </Link>
+                        <p>Electronics</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=books`} className="img">
+                            <img src={books} alt="" />
+                        </Link>
+                        <p>Books</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=kids`} className="img">
+                            <img src={kids} alt="" />
+                        </Link>
+                        <p>Kids</p>
+                    </div>
+                    <div className="link">
+                        <Link to={`/product-section?category=furniture`} className="img">
+                            <img src={furniture} alt="" />
+                        </Link>
+                        <p>Furniture & Home decor</p>
+                    </div>
                 </div>
             </div>
+
             <div className="adList">
                 <h2>Mobile Phones</h2>
                 <div className="cardBox">
                     {filterProducts.filter((product) => {
                         return product.category.includes('mobiles')
-                    }).map((data, index) => (
+                    }).map((data) => (
                         <ProductCard
                             index={data.key}
                             category={data.category}
