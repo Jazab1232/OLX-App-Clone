@@ -1,4 +1,4 @@
-.profileOptions{
+.profileOptions {
     width: 288px;
     height: fit-content;
     /* border: 1px solid black; */
@@ -10,27 +10,31 @@
     background-color: white;
     flex-direction: column;
 }
-.profile{
+
+.profile {
     display: flex;
     width: 100%;
     height: 100px;
     padding: 16px;
     gap: 20px;
     align-items: center;
-    
+
 }
-.profileImg{
+
+.profileImg {
     width: 60px;
     height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: flex-start;
 }
-.profileImg img{
+
+.profileImg img {
     width: 60px;
 }
+
 .btnProfile {
-    width: 240px;
+    width: 95%;
     height: 45px;
     border: 2px solid #041024;
     color: #041024;
@@ -38,49 +42,57 @@
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
-    margin: 0  16px;
+    margin: 0 16px;
     text-decoration: none;
     padding: 10px 10px;
-   
+    display: flex;
+    justify-content: center;
+
 }
-.btnProfile:hover{
+
+.btnProfile:hover {
     background-color: #041024;
     color: white;
 }
-.otherOption{
-    border-top:1px solid rgb(88, 88, 88) ;
+
+.otherOption {
+    border-top: 1px solid rgb(88, 88, 88);
     margin: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px 0 0 0;
 }
-.otherOption p{
+
+.otherOption p {
     display: flex;
     gap: 10px;
     align-items: center;
     padding: 0 16px;
     cursor: pointer;
 }
-.otherOption p:hover{
+
+.otherOption p:hover {
     color: #176161;
     text-decoration: underline;
 }
-.otherOption p i{
+
+.otherOption p i {
     text-align: center;
     width: 25px;
     font-size: 23px;
 }
 
-    
+
 @media (max-width:600px) {
-    .profileOptions{
+    .profileOptions {
         width: 100%;
         height: 90vh;
         top: 135px;
         left: 0px;
     }
 }
+
 /* @media (max-width:448px) {
     .profileOptions{
         width: 100%;

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/header.css';
-import profile from '../assets/profileIMG.png'
+import profile from '../assets/profileIMG.png';
 import logo from '../assets/logo2.png';
 import { Link } from 'react-router-dom';
 
-export default function Header({ disOption, setDisOption, setInputVal }) {
-    const [logedIn, setLogedIn] = useState(false);
+export default function Header({ disOption, setDisOption, setInputVal, setLogedin, logedIn }) {
     const [input, setInput] = useState('');
 
     function handleChange() {
@@ -14,15 +13,15 @@ export default function Header({ disOption, setDisOption, setInputVal }) {
 
     useEffect(() => {
         const storedLoggedIn = localStorage.getItem('logedIn') === 'true';
-        setLogedIn(storedLoggedIn);
-    }, []);
+        setLogedin(storedLoggedIn);
+    }, [setLogedin]);
 
     return (
         <div className='header'>
             <div className="nav">
-                <i class="fa-solid fa-bars" onClick={() => setDisOption(!disOption)} ></i>
+                <i className="fa-solid fa-bars" onClick={() => setDisOption(!disOption)}></i>
                 <Link to='/' className="logo1">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="Logo" />
                 </Link>
                 <div className="cars">
                     <i className="fa-solid fa-car"></i>
@@ -35,12 +34,12 @@ export default function Header({ disOption, setDisOption, setInputVal }) {
             </div>
             <div className="nav2">
                 <div className="location">
-                    <select name="" id="location">
-                        <option value="">Pakistan</option>
-                        <option value="">Punjab,Pakistan</option>
-                        <option value="">Islamabad,Pakistan</option>
-                        <option value="">Sindh,Pakistan</option>
-                        <option value="">KPK,Pakistan</option>
+                    <select name="location" id="location">
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Punjab,Pakistan">Punjab, Pakistan</option>
+                        <option value="Islamabad,Pakistan">Islamabad, Pakistan</option>
+                        <option value="Sindh,Pakistan">Sindh, Pakistan</option>
+                        <option value="KPK,Pakistan">KPK, Pakistan</option>
                     </select>
                 </div>
                 <div className="searchBox">
@@ -53,7 +52,7 @@ export default function Header({ disOption, setDisOption, setInputVal }) {
                     <i className="fa-regular fa-comment"></i>
                     <i className="fa-regular fa-bell"></i>
                     <div className="profileIcon" onClick={() => setDisOption(!disOption)} style={{ display: logedIn ? 'inline-block' : 'none' }}>
-                        <img src={profile} alt="" />
+                        <img src={profile} alt="Profile" />
                     </div>
                     <Link to='login' style={{ display: logedIn ? 'none' : 'inline-block', textDecoration: 'none', color: 'black' }}>
                         <h3>Login</h3>

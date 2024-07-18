@@ -37,6 +37,14 @@ const router = createBrowserRouter([
         path: "my-ads",
         element: <MyAds />
       },
+      {
+        path: "login",
+        element: <Login />
+      },
+      {
+        path: "login-info",
+        element: <AddLoginInfo />
+      },
     ]
 
   },
@@ -44,14 +52,7 @@ const router = createBrowserRouter([
     path: "post-ads",
     element: <PostAds />
   },
-  {
-    path: "login",
-    element: <Login />
-  },
-  {
-    path: "login-info",
-    element: <AddLoginInfo />
-  },
+
 
 
 ]);

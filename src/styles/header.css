@@ -13,11 +13,13 @@
     z-index: 10;
     height: 140px;
 }
-.fa-bars{
+
+.fa-bars {
     display: none;
     font-size: 24px;
     margin-right: 10px;
 }
+
 .nav {
     display: flex;
     align-items: center;
@@ -29,7 +31,6 @@
 .logo1 {
     display: flex;
     align-items: center;
-    padding: 0;
     padding: 0 20px 0 0;
 }
 
@@ -83,9 +84,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin: 0px 36px 6px;
+    margin: 0 36px 6px;
 }
-
 
 #location {
     width: 300px;
@@ -98,7 +98,6 @@
 .searchBox {
     width: 750px;
     height: 48px;
-    padding: 0;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -109,11 +108,9 @@
 .searchBox input {
     height: 45px;
     width: 560px;
-    padding: 0 0 0 20px;
+    padding-left: 20px;
     border: none;
     outline: none;
-
-
 }
 
 .searchBox button {
@@ -133,32 +130,25 @@ button i {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* background-color: #04111c; */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
 }
 
 .profileIcon img {
     width: 50px;
 }
 
-.fa-bell {
-    font-size: 25px;
-}
-
+.fa-bell,
 .fa-comment {
     font-size: 25px;
-
 }
 
 .profileIcon i {
     color: white;
     font-size: 25px;
     margin: 10px 0 0 10px;
-
 }
 
 .sellButton {
@@ -173,7 +163,6 @@ button i {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-
 }
 
 .sellButton p {
@@ -182,7 +171,7 @@ button i {
 }
 
 .navIcons {
-    margin: 0 0 0 20px;
+    margin-left: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -191,24 +180,17 @@ button i {
 .isLogin {
     text-decoration: none;
     color: black;
-    /* border-bottom: 2px solid black; */
 }
 
+/* Responsive Styles */
 
-@media (max-width:1025px) {
+@media (max-width: 1025px) {
     .navIcons i {
         display: none;
     }
-
-    .navIcons {
-        margin: 0 0 0 20px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
     #location {
         width: 150px;
         height: 48px;
@@ -218,99 +200,97 @@ button i {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .navIcons {
-        margin: 0 0 0 10px;
-        display: flex;
-        align-items: center;
+        margin-left: 10px;
         gap: 10px;
     }
-    .nav{
+
+    .nav {
         margin: 16px 10px 10px;
     }
+
     .nav2 {
-        display: flex;
-        align-items: center;
         gap: 10px;
-        margin: 0px 10px 6px;
+        margin: 0 10px 6px;
     }
-    
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
+    #location {
+        display: none;
+    }
 
-    #location{
+    .navIcons,
+    .sellButton {
         display: none;
     }
-    .navIcons{
-        display: none;
-    }
-    .sellButton{
-        display: none;
-    }
-    .searchBox{
+
+    .searchBox {
         width: 100%;
     }
-    .searchBox input{
+
+    .searchBox input {
         width: 90%;
     }
-    .searchBox button{
+
+    .searchBox button {
         width: 11%;
     }
-    .fa-bars{
+
+    .fa-bars {
         display: inline;
     }
-    
 }
-@media (max-width:448px) {
-    .header{
+
+@media (max-width: 448px) {
+    .header {
         padding: 0;
         height: 120px;
     }
+
     .logo1 {
-        
         padding: 0 15px 0 0;
     }
-    
+
     .logo1 img {
         width: 45px;
     }
-    .fa-bars{
+
+    .fa-bars {
         margin-right: 10px;
     }
-    .cars {
-        gap: 5px;
-        margin: 0 10px 0 0;
-    }
-    
-    .cars i {
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
-    }
+
+    .cars,
     .property {
         gap: 5px;
         margin: 0 10px 0 0;
     }
-    
+
+    .cars i,
     .property i {
         width: 30px;
         height: 30px;
         font-size: 20px;
     }
-    .nav span{
+
+    .nav span {
         font-size: 14px;
     }
-    .searchBox{
+
+    .searchBox {
         height: 30px;
     }
-    .searchBox input{
+
+    .searchBox input {
         height: 30px;
     }
-    .searchBox i{
+
+    .searchBox i {
         font-size: 12px;
     }
-    .searchBox button{
+
+    .searchBox button {
         width: 9%;
         height: 30px;
     }

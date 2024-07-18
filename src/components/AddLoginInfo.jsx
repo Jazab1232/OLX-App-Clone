@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/login.css';
 import logo from '../assets/logo2.png';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useOutletContext } from 'react-router-dom';
 
 export default function AddLoginInfo() {
-    const [logedIn, setLogedin] = useState();
+    const [logedIn, setLogedin] = useOutletContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     useEffect(() => {

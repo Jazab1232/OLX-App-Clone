@@ -15,7 +15,7 @@ export default function ProductSection() {
     const [condition, setCondition] = useState([])
     const [location, setLocation] = useState([])
     const [isDeliverable, setIsDeliverable] = useState([])
-    console.log(showFilter);
+    // console.log(showFilter);
 
     function useQuery() {
         return new URLSearchParams(useLocation().search);
