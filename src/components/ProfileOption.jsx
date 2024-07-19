@@ -33,7 +33,9 @@ export default function ProfileOption() {
                 <Link to={logedIn ? `/post-ads` : `/login`} onClick={() => { setDisOption(false); }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
                     <i className="fa-solid fa-camera"></i>Start Selling
                 </Link>
-                <p><i className="fa-regular fa-heart"></i>Favourite & Saved</p>
+                <Link to={`favorites`} onClick={() => { setDisOption(false); }} style={{ textDecoration: 'none', color: 'black', display: 'flex', paddingLeft: '20px', gap: '10px' }} >
+                    <i className="fa-regular fa-heart"></i>Favorites and Saved
+                </Link>
                 <p><i className="fa-regular fa-eye"></i>Public profile</p>
                 {logedIn ?
                     <p onClick={handleLogOut}><i className="fa-solid fa-arrow-right-from-bracket"></i>Log Out</p>

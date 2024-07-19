@@ -11,6 +11,7 @@ import AddLoginInfo from './components/AddLoginInfo.jsx';
 import UserProfile from './components/UserProfile.jsx';
 import ProductSection from './components/ProductSection.jsx';
 import MyAds from './components/MyAds.jsx';
+import Favorites from './components/Favorites.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: 'post-ads',
         element: <PostAds />
+      },
+      {
+        path: 'favorites',
+        element: <Favorites />
       }
     ]
   }
