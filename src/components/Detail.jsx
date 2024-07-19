@@ -39,7 +39,7 @@ export default function DetailPage() {
     }, []);
 
     function showNumber() {
-        setShowNum(true);
+        setShowNum(!showNum);
     }
 
     return (

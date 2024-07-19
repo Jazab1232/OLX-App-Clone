@@ -54,7 +54,7 @@ export default function Header({ disOption, setDisOption, setInputVal, setLogedi
                     <div className="profileIcon" onClick={() => setDisOption(!disOption)} style={{ display: logedIn ? 'inline-block' : 'none' }}>
                         <img src={profile} alt="Profile" />
                     </div>
-                    <Link to='login' style={{ display: logedIn ? 'none' : 'inline-block', textDecoration: 'none', color: 'black' }}>
+                    <Link to='login' style={{ display: logedIn ? 'none' : 'flex', textDecoration: 'none', color: 'black' ,alignItems:'center',paddingTop:'15px'}}>
                         <h3>Login</h3>
                     </Link>
                     <Link to={logedIn ? 'post-ads' : 'login'} className="sellButton">
