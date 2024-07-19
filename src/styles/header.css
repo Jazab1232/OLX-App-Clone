@@ -17,7 +17,8 @@
 .fa-bars {
     display: none;
     font-size: 24px;
-    margin-right: 10px;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 .nav {
@@ -183,6 +184,33 @@ button i {
 }
 
 /* Responsive Styles */
+@media (min-width:1140px) {
+    .searchBox {
+        width: 70%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+
+    .searchBox input {
+        height: 45px;
+        width: 90%;
+        padding-left: 20px;
+       
+    }
+
+    .searchBox button {
+        min-width: 10%;
+        height: 48px;
+        color: white;
+        border: none;
+        background-color: #04111c;
+        cursor: pointer;
+    }
+}
 
 @media (max-width: 1025px) {
     .navIcons i {
