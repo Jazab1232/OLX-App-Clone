@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/categoryCard.css'
 import { categoryImages } from './imgMapping';
-import { Link, useOutletContext } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function CategoryCard({ price, title, location, time, category, index }) {
     const [isFavorited, setIsFavorited] = useState(false);
