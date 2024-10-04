@@ -12,18 +12,26 @@ export default function Login() {
           <img src={logo} alt="" />
         </div>
         <h2>Login into your OLX account</h2>
-        <button> <i class="fa-brands fa-google"></i>Log In with Google</button>
-        <button><i class="fa-brands fa-facebook"></i>Log In with Facebook</button>
-        <p>OR</p>
         <Link to={{
           pathname: '/login-info',
           search: '?method=login'
-        }}  className='btn'>
+        }} className='btn'>
           <button><i class="fa-regular fa-envelope"></i>Log In with Email</button></Link>
         <Link to={{
           pathname: '/login-info',
           search: '?method=login'
-        }}  className='btn'>
+        }} className='btn'>
+          <button><i class="fa-regular fa-envelope"></i>Log In with number</button></Link>
+        <p>OR</p>
+        <Link to={{
+          pathname: '/login-info',
+          search: '?method=login'
+        }} className='btn'>
+          <button><i class="fa-regular fa-envelope"></i>Log In with Email</button></Link>
+        <Link to={{
+          pathname: '/login-info',
+          search: '?method=login'
+        }} className='btn'>
           <button > <i class="fa-solid fa-phone "></i>Log In with Number</button></Link>
         <Link to={{
           pathname: '/login-info',
