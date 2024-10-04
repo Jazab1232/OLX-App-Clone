@@ -19,7 +19,6 @@ export default function Header({ disOption, setDisOption, setInputVal, setLogedi
     return (
         <div className='header'>
             <div className="nav">
-                <i className="fa-solid fa-bars" onClick={() => setDisOption(!disOption)}></i>
                 <Link to='/' className="logo1">
                     <img src={logo} alt="Logo" />
                 </Link>
@@ -31,6 +30,9 @@ export default function Header({ disOption, setDisOption, setInputVal, setLogedi
                     <i className="fa-regular fa-building"></i>
                     <span>Property</span>
                 </div>
+
+                <i className="fa-solid fa-bars menuIcon" onClick={() => setDisOption(!disOption)}></i>
+
             </div>
             <div className="nav2">
                 <div className="location">
@@ -54,7 +56,7 @@ export default function Header({ disOption, setDisOption, setInputVal, setLogedi
                     <div className="profileIcon" onClick={() => setDisOption(!disOption)} style={{ display: logedIn ? 'inline-block' : 'none' }}>
                         <img src={profile} alt="Profile" />
                     </div>
-                    <Link to='login' style={{ display: logedIn ? 'none' : 'flex', textDecoration: 'none', color: 'black' ,alignItems:'center',paddingTop:'15px'}}>
+                    <Link to='login' style={{ display: logedIn ? 'none' : 'flex', textDecoration: 'none', color: 'black', alignItems: 'center', paddingTop: '15px' }}>
                         <h3>Login</h3>
                     </Link>
                     <Link to={logedIn ? 'post-ads' : 'login'} className="sellButton">

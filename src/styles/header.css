@@ -14,11 +14,13 @@
     height: 140px;
 }
 
-.fa-bars {
+.nav .fa-bars {
     display: none;
     font-size: 24px;
-    margin-right: 20px;
+    margin-left: 40px;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
 }
 
 .nav {
@@ -184,6 +186,7 @@ button i {
 }
 
 /* Responsive Styles */
+
 @media (min-width:1140px) {
     .searchBox {
         width: 70%;
@@ -266,7 +269,7 @@ button i {
         width: 11%;
     }
 
-    .fa-bars {
+    .nav .fa-bars {
         display: inline;
     }
 }

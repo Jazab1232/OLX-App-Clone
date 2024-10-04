@@ -1,5 +1,5 @@
 .home {
-    padding: 0 0 40px 0;
+    padding: 0 40px 40px ;
 }
 
 .homeNav {
@@ -123,6 +123,9 @@
 }
 
 @media (max-width:600px) {
+    .home{
+        padding: 0 20px 40px;
+    }
     .home h2 {
         font-size: 14px;
         margin-inline: 5px;
